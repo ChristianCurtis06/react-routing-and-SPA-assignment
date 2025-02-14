@@ -1,0 +1,173 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: rgb(24, 24, 24);
+    color: white;
+    margin: 0;
+}
+
+.alert-text, .placeholder {
+    margin: 10px;
+}
+
+nav {
+    background-color: rgb(48, 48, 48);
+    overflow: hidden;
+}
+
+nav a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    background-color: rgb(201, 201, 201);
+    color: black;
+}
+
+nav a.active {
+    background-color: crimson;
+    color: white;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.character-list h1 {
+    text-align: center;
+    color: crimson;
+    font-size: 4vw;
+}
+
+.character-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+.character-box {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    aspect-ratio: 1/1;
+    border-radius: 10px;
+    transition: transform 0.4s ease-in-out;
+}
+
+.character-box:hover {
+    transform: scale(1.1);
+    z-index: 2;
+}
+
+.character-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(100%);
+    transition: filter 0.4s ease-in-out;
+}
+
+.character-box:hover img {
+    filter: none;
+}
+
+.character-box h3 {
+    position: absolute;
+    text-align: right;
+    bottom: 10px;
+    right: 10px;
+    color: white;
+    font-size: 1.5vw;
+    text-shadow: 0 0 5px black;
+}
+
+.character-details {
+    border-radius: 20px;
+    border: 1px solid rgb(201, 201, 201);
+    display: flex;
+    margin: 20px;
+}
+
+.character-details img {
+    width: 50%;
+    border-radius: 20px 0 0 20px;
+    object-fit: cover;
+    aspect-ratio: 1/1;
+}
+
+.character-info {
+    width: 50%;
+    padding: 20px;
+    border-radius: 0 20px 20px 0;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(48, 48, 48);
+}
+
+.character-info h2 {
+    text-align: center;
+    color: crimson;
+    font-size: 3vw;
+    margin: 20px 0;
+}
+
+.character-info h3 {
+    color: white;
+    font-size: 2vw;
+}
+
+.character-info p {
+    margin: 0 0 20px 0;
+}
+
+.character-comics h3 {
+    margin: 0 0 16px 0;
+}
+
+@media (max-width: 768px) {
+    .character-list h1 {
+        font-size: 38px;
+    }
+    
+    .character-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .character-box h3 {
+        font-size: 15px;
+    }
+
+    .character-details {
+        flex-direction: column;
+    }
+
+    .character-details img {
+        width: 100%;
+        border-radius: 20px 20px 0 0;
+    }
+
+    .character-info {
+        width: 100%;
+        border-radius: 0 0 20px 20px;
+        padding: 0;
+    }
+
+    .character-info h2 {
+        font-size: 38px;
+    }
+
+    .character-info h3 {
+        font-size: 30px;
+    }
+
+    .character-info p, .character-comics {
+        padding: 0 20px;
+    }
+}
