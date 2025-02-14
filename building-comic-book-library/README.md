@@ -1,0 +1,1 @@
+This repository includes the assignment: Component Lifecyle, Events, and Forms in Module 11: Lesson 3 of the Software Engineering Core.
